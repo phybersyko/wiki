@@ -1,0 +1,321 @@
+/* CSS placed here will be applied to all skins */
+/* Enables PDF Icon */
+li.pdf {
+list-style-type: none;
+background: url('extensions/PdfExport/pdfIcon.gif') no-repeat top left;
+padding:4px 0px 8px 2px;
+margin:2px;
+display:block;
+text-transform:uppercase;
+font-size:10px;
+} 
+
+/* More CSS */
+table.wikitable,
+table.centertable,
+table.prettytable {
+    margin: 1em 1em 1em 0;
+    background: #f9f9f9;
+    border: 1px #aaa solid;
+    border-collapse: collapse;
+}
+.wikitable th, .wikitable td,
+.prettytable th, .prettytable td {
+    border: 1px #aaa solid;
+    padding: 0.2em;
+}
+.centertable th, .centertable td {
+	border:1px #aaa solid;
+	padding: 0.2em;
+	text-align:center;
+	vertical-align:top;
+}
+.wikitable th,
+.centertable th,
+.prettytable th {
+    background: #f2f2f2;
+    text-align: center;
+}
+.wikitable caption,
+.centertable caption
+.prettytable caption {
+    font-weight: bold;
+}
+
+/* useful alignment class */
+.vtop {vertical-align:top;}
+.ctop {vertical-align:text-top;margin-left:auto;margin-right:auto;}
+.cen  {text-align:center;}
+.right {text-align:right;}
+
+/* special color coding for terminal-like interfaces */
+pre.TERMINAL    { background-color: #000000; color:#00FF00; display:block; width:50em; white-space:pre-wrap;border: 1px black solid; }
+pre.TERM        { background-color: #000000; color:#FFFFFF; display:block; width:50em; white-space:pre-wrap;border: 1px black solid; }
+/* pre.TERM sets displays output as if it were 80-column text. */
+
+/* pre.WINTERM sets displays output as if it were 80-column text. Using an MS-DOS like appearance. */ 
+pre.WINTERM     {
+    background-color: #0000FF; color:#FFFFFF; 
+    display:block; width:50em; white-space:pre-wrap;
+    font-family:terminal; border-width:2px; 
+    border-style:solid; border-color:#000000; }
+
+pre.QSPLUS     {
+    background-color:cyan;
+    color:black; width:52em; word-wrap:break-word; 
+    white-space:pre-wrap; border: 1px black solid; }
+
+/* this should enable word wrapping on long lines of pre-formatted text while retaining the standard wiki pre-tag configuration*/
+pre {word-wrap: break-word;}
+
+pre.DBQUERY  {
+    background-color: #EEEEEE; color:#000000;
+    display:block; width:70em; border-width:1px;
+    border-style:solid; border-color:#999999;
+    padding:10px;}
+
+/* Formatted DBQUERY custom-class. Enables text-highlighting within the DIV elements for better illustration of modifications to a configuration file */
+
+div.DBQUERY {
+    background-color: #EEEEEE; color: #000000;
+    display: block; width: 70em; border-width: 1px;
+    border-style: solid; border-color: #999999;
+    padding: 10px; white-space:pre-wrap;
+    font-family: Courier; font-size: 12px;}
+
+div.TERMINAL {
+    background-color: #000000; color:#00FF00;
+    display:block; width:50em;
+    white-space:pre-wrap;
+    font-family: Courier; font-size: 12px;
+    padding:8px;
+    border: 1px black solid; }
+
+div.TERM {
+    display:block; width:50em;
+    font-family:Courier; font-size:12px;
+    background-color:#000000; color:#FFFFFF;
+    white-space:pre-wrap; padding-left:4px;
+    margin-left:70px; }
+/* Like above pre.TERM, but with DIV tag, enabling color customizations within the text block. */
+
+div.WINTERM     {
+    background-color: #0000FF; color:#FFFFFF; 
+    display:block; width:50em; white-space:pre-wrap;
+    font-family:terminal; border:2px black solid;}
+
+/* Above added on 2013APR01 - by JES-65403 */
+
+/* Format NOTE sections in text 2011OCT13 by JES-65403*/
+div.NOTE {
+    display:block;
+    background-color:#F2F2F2;
+    margin:4px;
+    padding:4px;
+    border-style:solid;
+    border-color:#000000;
+    border-width:1px 0px 1px 0px;}
+
+
+/* special highlighting code added 02FEB2009 by JES-65403 */
+.HLred		{ background-color: #FF3300; }
+.HLorange	{ background-color: #FF9900; }
+.HLyellow	{ background-color: #FFFF00; }
+.HLgreen	{ background-color: #99FF33; }
+.HLgrey         { background-color: #BFBFBF; }
+
+/* enable list-item types added 2012FEB08 by JES-65403 */
+ul.circle {list-style-type:circle}
+ul.square {list-style-type:square}
+ol.upper-roman {list-style-type:upper-roman}
+ol.lower-alpha {list-style-type:lower-alpha}
+
+/* Enable keyboard-keys to look like actual keys - Added 2015FEB25 by JES-65403 */
+.kbd { color: #000000;background:#EEEEEE;
+	border-style:solid;
+	border-color:#cccccc #aaaaaa #88888 #bbbbbb;
+	padding: .1em .6em;
+	border: 1px solid #cccccc;
+	font-size:0.85em;
+	font-family: inherit;
+	background-color:#f7f7f7;
+	color: #333333;
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #ffffff inset;
+	-webkit-box-shadow: 0 1 px 0 rgba(0,0,0,0.2),0 0 0 2px #ffffff inset;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #ffffff inset;
+	border-radius:3px;
+	display: inline-block;
+	margin 0 .1em;
+	text-shadow: 0 1 px 0 #ffffff;
+	line-height: 1.4;
+	white-space: nowrap;
+     }
+
+
+/* CSS placed here will be applied to all skins */
+table.calendar          { margin: 0; padding: 10px; }
+table.calendar td       { margin: 0; padding: 2px; vertical-align: top; }
+table.month .heading td { padding:2px; background-color:#d4d4d4; color:#aaa; text-align:center; font-size:120%; font-weight:bold; }
+table.month .dow td     { color:#aaa; text-align:center; font-size:110%; }
+table.month td.today    { background-color:#ddd; }
+table.month td {
+    border: none;
+    margin: 0;
+    padding: 1pt 1.5pt;
+    font-weight: bold;
+    font-size: 8pt;
+    text-align: right;
+    background-color: #eee;
+    }
+#bodyContent table.month a { background:none; padding:0 }
+.day-active { color:#0000cc }
+.day-empty  { color:#cc0000 }
+
+/*--- This stuff below hides the old navigation menu ----*/
+/*--- Disabling the section below will reveal the original nav/toolbox data ---*/
+#p-navigation, #p-tb h5, #p-tb .pBody { display:none }
+
+/*--- End of Navigation Hiding thing --*/
+
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landr�               |
+|--------------------------------------------------*/
+ 
+.dtree {
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        color: #666;
+        /*-- white-space: nowrap; --*/
+        width:156px;
+}
+.dtree img {
+        border: 0px;
+        vertical-align: middle;
+}
+.dtree a {
+        color: #333;
+        text-decoration: none;
+
+}
+
+.dtree a:hover {text-decoration:underline;} /*-- Added by JES-65403 --*/
+
+.dtree a.node, .dtree a.nodeSel {
+        white-space: nowrap;
+        padding: 1px 1px 1px 1px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+        color: #333;
+        text-decoration: underline;
+
+}
+.dtree a.nodeSel {
+        background-color: #c0d2ec;
+}
+.dtree .clip {
+        overflow: hidden;
+}
+
+
+/*
+* Dynamic menus
+*/
+.dmenu { width: 180px }
+ 
+.dmenu, .dmenu ul { /* all lists */
+padding: 0;
+margin: 0;
+list-style: none;
+}
+.dmenu .selflink { font-weight: normal; }
+ 
+.dmenu li { /* all list items */
+position: relative;
+float: left;
+width: 172px;
+padding: 2px;
+z-index: 100;
+}
+ 
+.dmenu li,
+.dmenu li.even a,
+.dmenu li.odd a,
+.dmenu li li,
+.dmenu li li a,
+.dmenu li li li,
+.dmenu li li li a {
+color : black;
+}
+ 
+.dmenu li li { margin: 0; }
+ 
+.dmenu li ul { /* second-level lists */
+position: absolute;
+left: -999em;
+z-index: 101;
+border: 1px solid #ccc;
+}
+ 
+.dmenu li ul ul { /* third-and-above-level lists */
+position: absolute;
+left: -999em;
+margin: 0 0 0 0;
+z-index: 102;
+}
+ 
+.dmenu li.odd .submenu {
+width: 12px;
+height: 15px;
+float: right;
+background: url(/common/images/rarr-lt.png) 0 3px no-repeat;
+}
+.dmenu li.even .submenu {
+width: 12px;
+height: 15px;
+float: right;
+background: url(/common/images/rarr-dk.png) 0 3px no-repeat;
+}
+.dmenu li.odd {
+	background: #E9EDF4;
+	border: 2px solid #E9EDF4;
+}
+.dmenu li.even {
+	background: #D0D8E8;
+	border: 2px solid #D0D8E8;
+}
+ 
+.dmenu li:hover, .dmenu li.sfhover {
+	border: 2px solid #385D8A;
+
+}
+ 
+.dmenu li:hover ul ul,
+.dmenu li:hover ul ul ul,
+.dmenu li.sfhover ul ul,
+.dmenu li.sfhover ul ul ul {
+left: -999em;
+}
+ 
+.dmenu li:hover ul,
+.dmenu li li:hover ul,
+.dmenu li li li:hover ul,
+.dmenu li.sfhover ul,
+.dmenu li li.sfhover ul,
+.dmenu li li li.sfhover ul { /* lists nested under hovered list items */
+left: 182px;
+top: -3px;
+}
+
+/* Collapsible Objects */
+table.collapsed tr.collapsible {
+        display: none;
+}
+ 
+.collapseButton {               /* 'show'/'hide' buttons created dynamically by the             */
+        float: right;           /* CollapsibleTables JavaScript in [[MediaWiki:Common.js]] */
+        font-weight: normal;    /* are styled here so they can be customised.             */
+        text-align: right;
+        width: auto;
+}
