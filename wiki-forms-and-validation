@@ -1,0 +1,130 @@
+# This code is for a check-box enabled form that 'signs-off' on activites performed by the form submitter:
+
+<HTML>
+<!-- Custom JavaScript Functions //-->
+<!--//
+//* Custom Function By: J. Eric Stout *//
+//* Built on: 2013SEP20               *//
+//-->
+<SCRIPT language="javascript" type="text/javascript">
+  function findUser(thisName) {
+    var yourName = document.getElementById('SA_NAME').value;
+    var thisBox = document.activeElement.name;
+         if ( document.getElementById(thisBox).checked == true )
+              { document.getElementById(thisName).innerHTML = yourName; }
+         else { document.getElementById(thisName).innerHTML = ""; }
+  }
+
+//-->
+</SCRIPT>
+</HTML>
+
+### WIKICODE ###
+{|class="prettytable"
+|-
+!Your Name
+!System Name
+|-
+|<HTML><INPUT TYPE="text" onFocus="clearText(this)" VALUE="Your_Name" ID="SA_NAME" NAME="SA_NAME"/></HTML>
+|<HTML><INPUT TYPE="text" onFocus="clearText(this)" VALUE="System Name" ID="SYS_NAME" NAME="SYS_NAME"/></HTML>
+|-
+|colspan="2"|This is used to populate the checklist SA "signature" fields below.
+|-
+|}
+
+
+### Table element with divs ###
+
+{|style="width:800px;display:block;" class="wikitable FCK__ShowTableBorders"
+|-
+| colspan="6" bgcolor="#999999" | '''Physical Check-In''' (Where applicable)
+|-
+!√
+! Category
+! Notes
+! class="noprint" | Link
+! SA
+! SA Notes
+|-
+|<html><input type="checkbox" name="PCI_1" id="PCI_1" onChange="findUser('PCI_A');"></html>
+|<!-- CAT //--> Sample Category
+|<!-- NOT //--> Sample notes
+|class="noprint"|<!-- LNK //--> [[Internal_Wiki_Article_Reference Link_Name]
+|<!-- SIG //--> <DIV ID="PCI_A"></DIV>
+|<!-- ADD //--> <html><INPUT TYPE="text" onFocus="clearText(this)" SIZE="50" VALUE="" NAME="PCI_A_Notes" /></html>
+|}
+
+<!--//
+Note that the element NAME and ID must be unique for each form entry.
+//-->
+
+
+### Webform for email submission
+<!--//
+The code below can be contained within a wiki-code table-definition.
+Form-field validation is performed as well.
+
+//-->
+<SPAN class="noprint">
+<DIV align="center">
+<HTML>
+<SCRIPT LANGUAGE="Javascript">
+ <!--
+ function clearText(theText) 
+{
+     if (theText.value == theText.defaultValue)
+ {
+         theText.value = ""
+     }
+ }
+
+function toggle( myId ){
+      thisId=document.all(myId);
+      if (thisId.style.display == "none")
+      {thisId.style.display = "";}
+      else { thisId.style.display = "none";}
+}
+
+function validate(frm) {
+if (frm.deployHostname.value == "REQUIRED" || frm.deployHostname.value == ""){
+  alert("You must enter a System Hostname");
+  frm.deployHostname.focus();
+  return false; }
+}
+
+ //-->
+ </SCRIPT>
+<FORM METHOD="POST" ACTION="http://webhost/cgi-bin/deploy.cgi" onsubmit="return validate(DeployMail)" NAME="DeployMail" ID="DeployMail" TARGET="_blank">
+<TABLE class="prettytable">
+<TR><TD COLSPAN="2" STYLE="background-color:#D8D8D8;font-weight:bold;text-align:center;">Logistics Deployment Notification Form</TD></TR>
+<TR><TD>Hostname:</TD><TD><INPUT TYPE="text" onFocus="clearText(this)" VALUE="REQUIRED" ID="deployHostname" NAME="deployHostname" /></TR>
+<TR><TD>System Type:</TD><TD><INPUT TYPE="radio" NAME="deployType" VALUE="Physical" onChange="toggle('phys');toggle('phys2');">Physical</INPUT><INPUT TYPE="radio" NAME="deployType" VALUE="Virtual" CHECKED="checked" onChange="toggle('phys');toggle('phys2');">Virtual</input></TD></TR>
+<TR style="display:none;" id="phys"><TD>Serial:</TD><TD><INPUT TYPE=text" onFocus="clearText(this)" VALUE="Virtual NA" NAME="deploySerial" /></TD></TR>
+<TR style="display:none;" id="phys2"><TD>Asset:</TD><TD><INPUT TYPE=text" onFocus="clearText(this)" VALUE="Virtual NA" NAME="deployAsset" /></TD></TR>
+<TR><TD>Platform:</TD><TD><SELECT NAME="deployPlatform"><OPTION VALUE="AIX">AIX</option><OPTION VALUE="HP-UX">HP-UX</option><OPTION VALUE="Linux">Linux</option><OPTION VALUE="Solaris">Solaris</option></SELECT>
+</TD>
+<TR><TD COLSPAN="2" style="text-align:center;"><INPUT TYPE="hidden" VALUE="name@hdomain.com" NAME="email"><INPUT TYPE="hidden" name="html" value="yes"><INPUT TYPE="Reset" VALUE="CLEAR"/><INPUT TYPE="SUBMIT" VALUE="SUBMIT"/>
+</TABLE>
+</FORM>
+</HTML>
+</DIV>
+</SPAN>
+
+
+####
+<!--//
+Simple hide/unhide function
+//-->
+<html>
+<script language="javascript" type="text/javascript">
+function wonk() {
+var x = document.getElementsByTagName("a");
+// var nr_li = x.length; //
+for (int i = 0; i < x.length; i++) {
+  document.write(x[i]);
+  }
+//* window.onload = getUserName(); *//
+}
+</script>
+<input type="button" onclick="wonk();" value="Show elements?">
+</html>
